@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from './logo.png'
 import "./App.css";
 import Particles from "react-particles-js";
 import Typewriter from 'typewriter-effect'
@@ -77,7 +77,12 @@ function App() {
 				<div className="logo-container">
 					<div>
 						<h1>Spotistats.</h1>
-						<p>Your Spotify stats, 
+						<p>
+							Your 
+							<img 
+								src={logo}
+								alt="Spotify " /> 
+							stats, 
 							<Typewriter
 								options={{
 									strings: [' visualized.', ' all in one place.', ' on demand.', ' explained.'],

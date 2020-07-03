@@ -1,6 +1,6 @@
 :root{
-	--bg-dark: rgb(34,35,38);
-	--spotify-green: rgb(29,185,84);
+	--bg-dark: #191414;
+	--spotify-green: #1DB954;
 }
 
 *{
@@ -67,6 +67,11 @@ body::-webkit-scrollbar-track-piece
 
 .hero .grid-container .logo-container .Typewriter{
 	display: inline;
+}
+
+.hero .grid-container .logo-container img{
+	height: 28px;
+	margin: 0px 10px;
 }
 
 /* Particles background */
