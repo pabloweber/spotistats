@@ -1,38 +1,83 @@
+:root{
+	--bg-dark: rgb(34,35,38);
+	--spotify-green: rgb(29,185,84);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, #root, .App{
+	height: 100%;
+}
+
+body::-webkit-scrollbar {
+	width: 0.3em;
+	background: var(--bg-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--spotify-green);
+	height: 20px;
+	border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track-piece
+{
+	display:none;
+}
+
 .App {
-  text-align: center;
+	background-color: var(--bg-dark);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero{
+	height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero .grid-container{
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hero .grid-container .logo-container{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.hero .grid-container .logo-container h1{
+	font-family: 'Playfair Display', serif;
+	color: white;
+	font-size: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero .grid-container .logo-container p{
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	font-size: 32px;
+}
+
+.hero .grid-container .logo-container .Typewriter{
+	display: inline;
+}
+
+/* Particles background */
+#tsparticles{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.features{
+	height: 100vh;
+	background-color: coral;
 }
