@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MainStats from '../Components/MainStats.js'
 
 export default class Home extends Component {
 	constructor(props) {
@@ -11,22 +12,7 @@ export default class Home extends Component {
 			token: token,
 			error: error,
 		};
-
 		this.getToken = this.getToken.bind(this);
-	}
-
-	async componentDidMount() {
-		const url = "https://api.spotify.com/v1/me";
-
-		const response = await fetch(url, {
-			method: "GET",
-			headers: { Authorization: "Bearer " + this.state.token },
-		});
-		const hed = this.state.token;
-		const data = await response.json();
-		console.log(data);
-		console.log(this.state.token);
-		console.log(hed);
 	}
 
 	// Set code as state
@@ -44,7 +30,7 @@ export default class Home extends Component {
 
 	render() {
 		return !this.state.error ? (
-			<div style={{ color: "white" }}>You are logged in!</div>
+			<MainStats token={this.state.token} />
 		) : (
 			<div>Bye!</div>
 		);

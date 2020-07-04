@@ -46,12 +46,14 @@ export default class Hero extends React.Component {
 			"user-follow-modify",
 		];
 
+		console.log(scopes.join(' '))
+
 		const url =
 			"https://accounts.spotify.com/authorize?" +
 			querystring.stringify({
 				response_type: "token",
 				client_id: CLIENT_ID,
-				scope: scopes,
+				scope: scopes.join(" "),
 				redirect_uri: REDIRECT_URI,
 			});
 

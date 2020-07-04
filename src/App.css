@@ -16,6 +16,7 @@ body,
 #root,
 .App {
 	height: 100%;
+	color: white;
 }
 
 body::-webkit-scrollbar {
@@ -117,4 +118,46 @@ body::-webkit-scrollbar-track-piece {
 .features {
 	height: 100vh;
 	background-color: coral;
+}
+
+.home-mainstats-container{
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.home-mainstats-container .hello-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	grid-column: 1/4;
+
+	font-family: var(--primary-font);
+	font-weight: 900;
+	font-size: 72px;
+	text-align: center;
+}
+
+.home-mainstats-container .hello-container div div{
+	font-family: var(--secondary-font);
+	font-size: 42px;
+	font-weight: 200;
+}
+
+.home-mainstats-container .liked-statistic-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: var(--secondary-font);
+	font-weight: 600;
+	font-size: 52px;
+	text-align: center;
+}
+
+.home-mainstats-container .liked-statistic-container div div{
+	font-size: 32px;
+	font-weight: 200;
 }
