@@ -1,15 +1,20 @@
-:root{
+:root {
 	--bg-dark: #191414;
-	--spotify-green: #1DB954;
+	--spotify-green: #1db954;
+	--primary-font: "Playfair Display", serif;
+	--secondary-font: "Raleway", sans-serif;
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-html, body, #root, .App{
+html,
+body,
+#root,
+.App {
 	height: 100%;
 }
 
@@ -24,28 +29,30 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 50px;
 }
 
-body::-webkit-scrollbar-track-piece
-{
-	display:none;
+body::-webkit-scrollbar-track-piece {
+	display: none;
 }
 
 .App {
 	background-color: var(--bg-dark);
 }
 
-.hero{
+.hero {
 	height: 100vh;
+	display: flex;
+	justify-content: center;
 }
 
-.hero .grid-container{
+.hero .grid-container {
 	height: 100%;
 	width: 100%;
+	max-width: 2000px;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.hero .grid-container .logo-container{
+.hero .grid-container .logo-container {
 	grid-column: 1/2;
 	grid-row: 2/3;
 	display: flex;
@@ -53,36 +60,61 @@ body::-webkit-scrollbar-track-piece
 	align-items: center;
 }
 
-.hero .grid-container .logo-container h1{
-	font-family: 'Playfair Display', serif;
+.hero .grid-container .logo-container h1 {
+	font-family: var(--primary-font);
 	color: white;
 	font-size: 120px;
 }
 
-.hero .grid-container .logo-container p{
-	font-family: 'Open Sans', sans-serif;
+.hero .grid-container .logo-container p {
+	font-family: var(--secondary-font);
 	color: white;
 	font-size: 32px;
 }
 
-.hero .grid-container .logo-container .Typewriter{
+.hero .grid-container .logo-container .Typewriter {
 	display: inline;
 }
 
-.hero .grid-container .logo-container img{
+.hero .grid-container .logo-container img {
 	height: 28px;
 	margin: 0px 10px;
 }
 
+.hero .grid-container .get-started-button {
+	grid-column: 2/3;
+	grid-row: 3/4;
+	display: flex;
+	align-items: center;
+}
+
+.hero .grid-container .get-started-button button {
+	height: 60px;
+	width: 280px;
+	border: none;
+	border-radius: 50px;
+	background-color: var(--spotify-green);
+	font-family: var(--secondary-font);
+	font-weight: 500;
+	font-size: 24px;
+	color: white;
+	outline: 0;
+	cursor: pointer;
+}
+
+.hero a {
+	z-index: 1;
+}
+
 /* Particles background */
-#tsparticles{
+#tsparticles {
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	top: 0;
 }
 
-.features{
+.features {
 	height: 100vh;
 	background-color: coral;
 }
